@@ -203,11 +203,10 @@ let tentativa = 0;
 
 function entrar(){
 
-    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("inicio").style.display = "none";
 
     document.getElementById("login").classList.remove("hidden");
 
-    document.getElementById("musica").play();
 }
 
 document.getElementById("senha").addEventListener("keypress", function(e){
