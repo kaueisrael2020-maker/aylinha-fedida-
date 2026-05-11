@@ -100,11 +100,16 @@ input{
     margin:auto 0;
     
     width:40px;
-    height:40px;
+    height:100%;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
 
     background:none;
     border:none;
@@ -183,7 +188,9 @@ input{
     <h1>Oi meu amor ❤️</h1>
 
     <p>
-        Fiz esse site só pra você...
+       É algo simples, mas espero que goste...
+        
+           Fiz esse site só pra você...
     </p>
 
 </div>
@@ -248,7 +255,7 @@ function verificarSenha(){
         if(tentativa === 1){
 
             mensagem.innerHTML =
-            "Digite seu nome completo em letras minúsculas.";
+            "Digite seu nome completo e em letras minúsculas amor.";
 
         }else if(tentativa === 2){
 
@@ -258,7 +265,7 @@ function verificarSenha(){
         }else{
 
             mensagem.innerHTML =
-            "Parabéns, você acertou gatinha";
+            "Parabéns amor, sabia que você acertaria...";
         }
     }
 }
