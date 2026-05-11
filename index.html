@@ -206,7 +206,10 @@ function entrar(){
     document.getElementById("inicio").style.display = "none";
 
     document.getElementById("login").classList.remove("hidden");
-
+    const musica = document.getElementById("musica");
+    if(musica){
+        musica.play().catch(() =>{});
+    }
 }
 
 document.getElementById("senha").addEventListener("keypress", function(e){
