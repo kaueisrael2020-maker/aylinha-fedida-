@@ -154,7 +154,19 @@ input{
 
 
     </div>
+</div>
 
+<div id="surpresa" class="hidden">
+
+    <h1>Oi meu amor ❤️</h1>
+
+    <p>
+        Fiz esse site só pra você...
+    </p>
+
+</div>
+
+</div>
 </div>
 
 <audio id="musica" loop>
@@ -197,12 +209,9 @@ function verificarSenha(){
         mensagem.innerHTML =
         "Parabéns amor,sabia que você descobriria...";
 
-        setTimeout(() => {
+       document.getElementById("login").classList.add("hidden");
 
-            window.location.href = "home.html";
-
-        }, 2000);
-
+       document.getElementById("surpresa").classList.remove("hidden");
     }else{
 
         tentativa++;
