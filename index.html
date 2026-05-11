@@ -81,6 +81,26 @@ input{
         transform:translateY(0);
     }
 }
+    .senha-box{
+    position:relative;
+}
+
+.olho{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+    color:black;
+}
+
+.entrar-btn{
+    margin-top:20px;
+    width:100%;
+}
 </style>
 </head>
 
@@ -100,13 +120,26 @@ input{
 
         <h1>Digite seu nome</h1>
 
-        <input
-            type="password"
-            id="senha"
-            placeholder="Seu nome..."
-        >
+     <div class="senha-box">
 
-        <div class="mensagem" id="mensagem"></div>
+    <input
+        type="password"
+        id="senha"
+        placeholder="Seu nome..."
+    >
+
+    <button class="olho" onclick="mostrarSenha()">
+        👁️
+    </button>
+
+</div>
+
+<button class="entrar-btn" onclick="verificarSenha()">
+    Próximo
+</button>
+
+<div class="mensagem" id="mensagem"></div>
+
 
     </div>
 
@@ -118,7 +151,7 @@ input{
 
 <script>
 
-const senhaCorreta = "ayladanieleamaranteisrael";
+const senhaCorreta = "ayladanieliamaranteisrael";
 
 let tentativa = 0;
 
@@ -179,7 +212,20 @@ function verificarSenha(){
         }
     }
 }
+function mostrarSenha(){
 
+    const input =
+    document.getElementById("senha");
+
+    if(input.type === "password"){
+
+        input.type = "text";
+
+    }else{
+
+        input.type = "password";
+    }
+}
 </script>
 
 </body>
