@@ -122,7 +122,7 @@ button{
 <body>
     <div id="inicio">
 
-   <h1 id="pergunta">Adivinhe a senha:</h1>
+   <h1 id="pergunta">Digite seu nome:</h1>
 
 <input type="text" id="senha" placeholder="Digite aqui...">
 
@@ -203,7 +203,7 @@ function verificarSenha(){
 
     const pergunta = document.getElementById("pergunta");
 
-    if(etapa === 0 && senha === "ayla"){
+    if(etapa == 0 && (valor === "Ayla" || valor == "ayla")){
 
         etapa = 1;
 
@@ -219,7 +219,7 @@ function verificarSenha(){
         etapa = 2;
 
         pergunta.innerHTML =
-        "Digite seu nome futuramente...";
+        "Quase lá, digite seu nome futuramente...";
 
         document.getElementById("senha").value = "";
 
@@ -237,7 +237,7 @@ function verificarSenha(){
 
         document.getElementById("surpresa").innerHTML = `
             <h1>
-            Parabéns amor, sabia que você conseguiria.. ❤️
+            Parabéns amor, sabia que você acertaria.. ❤️
             </h1>
         `;
 
@@ -253,7 +253,7 @@ function verificarSenha(){
 
     else{
 
-        alert("Senha errada kkkkk");
+        alert("Senha errada tonhona, tente novamente...");
 
     }
 
