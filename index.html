@@ -122,11 +122,11 @@ button{
 <body>
     <div id="inicio">
 
-    <h1>Digite seu nome</h1>
+   <h1 id="pergunta">Adivinhe a senha:</h1>
 
-    <input type="text" id="senha" placeholder="Seu nome...">
+<input type="text" id="senha" placeholder="Digite aqui...">
 
-    <button onclick="entrar()">Próximo</button>
+<button onclick="verificarSenha()">Próximo</button>
 
 </div>
 
@@ -195,26 +195,69 @@ ass: Kaue Israel.
 </div>
 <script>
 
-function entrar(){
+let etapa = 0;
 
-    document.getElementById("inicio").style.display = "none";
+function verificarSenha(){
 
-    document.getElementById("surpresa").style.display = "block";
+    const senha = document.getElementById("senha").value.toLowerCase();
 
-    const musica = document.getElementById("musica");
+    const pergunta = document.getElementById("pergunta");
 
-    musica.play();
+    if(etapa === 0 && senha === "ayla"){
 
-    setTimeout(() => {
+        etapa = 1;
 
-        document.getElementById("surpresa").remove()
+        pergunta.innerHTML =
+        "Digite seu nome completo em letras minúsculas amor:";
 
-        document.getElementById("site").style.display = "block";
+        document.getElementById("senha").value = "";
 
-    }, 4000);
+    }
+
+    else if(etapa === 1 && senha === "ayla danieli amarante"){
+
+        etapa = 2;
+
+        pergunta.innerHTML =
+        "Digite seu nome futuramente...";
+
+        document.getElementById("senha").value = "";
+
+    }
+
+    else if(etapa === 2 && senha === "ayla danieli amarante israel"){
+
+        document.getElementById("inicio").style.display = "none";
+
+        document.getElementById("surpresa").style.display = "block";
+
+        const musica = document.getElementById("musica");
+
+        musica.play();
+
+        document.getElementById("surpresa").innerHTML = `
+            <h1>
+            Parabéns amor, sabia que você conseguiria.. ❤️
+            </h1>
+        `;
+
+        setTimeout(() => {
+
+            document.getElementById("surpresa").remove();
+
+            document.getElementById("site").style.display = "block";
+
+        }, 3000);
+
+    }
+
+    else{
+
+        alert("Senha errada kkkkk");
+
+    }
 
 }
-
 </script>
 </body>
 </html>
