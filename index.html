@@ -24,6 +24,11 @@ body{
     overflow:hidden;
 }
 
+#site-antigo{
+  display:none;
+}
+
+    
 .container{
     text-align:center;
     width:90%;
@@ -186,6 +191,8 @@ input{
        É algo simples, mas espero que goste...<br>
        Fiz esse site só pra você...
     </p>
+</div>
+    <div id="site-antigo">
     <div class="container">
 
 <h1>💕 Para Você 💕</h1>
@@ -232,15 +239,26 @@ let tentativa = 0;
 
 function entrar(){
 
-    document.getElementById("inicio").style.display = "none";
+document.getElementById("inicio").style.display = "none";
 
-    document.getElementById("login").classList.remove("hidden");
-    const musica = document.getElementById("musica");
-    if(musica){
-        musica.play().catch(() =>{});
-    }
+document.getElementById("surpresa").style.display = "flex";
+
+const musica = document.getElementById("musica");
+
+if(musica){
+musica.play().catch(() => {});
 }
 
+setTimeout(() => {
+
+document.getElementById("surpresa").style.display = "none";
+
+document.getElementById("site-antigo").style.display = "block";
+
+}, 4000);
+
+}
+    
 document.getElementById("senha").addEventListener("keypress", function(e){
 
     if(e.key === "Enter"){
