@@ -90,6 +90,10 @@ audio{
 #surpresa{
     display:none;
 }
+#surpresa{
+    text-align:center;
+    padding-top:150px;
+}
 
 #site{
     display:none
@@ -203,7 +207,7 @@ function entrar(){
 
     setTimeout(() => {
 
-        document.getElementById("surpresa").style.display = "none";
+        document.getElementById("surpresa").remove()
 
         document.getElementById("site").style.display = "block";
 
