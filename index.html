@@ -112,7 +112,7 @@ audio{
 
 </div>
 
-<div id="site">
+<div id="site-antigo">
 
 <div class="container">
 
@@ -145,7 +145,7 @@ ass: Kaue Israel.
 
 <div class="coracao">❤️</div>
 
-<audio controls autoplay loop>
+<audio id="musica" controls loop>
     <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
@@ -165,11 +165,24 @@ ass: Kaue Israel.
 
 </div>
 <script>
-const musica = document.getElementById("musica");
+function entrar(){
 
-document.body.addEventListener("click", () => {
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("surpresa").style.display = "block";
+
+    const musica = document.getElementById("musica");
+
     musica.play();
-}, { once: true });
+
+    setTimeout(() => {
+
+        document.getElementById("surpresa").style.display = "none";
+
+        document.getElementById("site-antigo").style.display = "block";
+
+    }, 4000);
+}
 </script>
 </body>
 </html>
