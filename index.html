@@ -202,6 +202,8 @@ ass: Kaue Israel.
 let etapa = 0;
 
 function verificarSenha(){
+    const musica = document.getElementById("musica");
+        musica.play();
 
     const senha = document.getElementById("senha").value.toLowerCase();
 
@@ -238,10 +240,6 @@ function verificarSenha(){
         document.getElementById("inicio").style.display = "none";
 
         document.getElementById("surpresa").style.display = "block";
-
-        const musica = document.getElementById("musica");
-
-        musica.play();
 
         document.getElementById("surpresa").innerHTML = `
             <h1>
