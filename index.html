@@ -122,7 +122,11 @@ button{
 <body>
     <div id="inicio">
 
-   <h1 id="pergunta">Digite seu nome:</h1>
+   <h1 id="pergunta">
+       Antes de entrar...<br><br>
+       Preciso saber se é realmente você ❤️<br><br>
+       Digite seu nome:
+   </h1>
 
 <input type="text" id="senha" placeholder="Digite aqui...">
 
@@ -208,7 +212,9 @@ function verificarSenha(){
         etapa = 1;
 
         pergunta.innerHTML =
-        "Digite seu nome completo em letras minúsculas amor:";
+        "Agora digite seu nome completo<br><br>
+        em letras minúsculas amor:
+        ";
 
         document.getElementById("senha").value = "";
 
@@ -219,7 +225,9 @@ function verificarSenha(){
         etapa = 2;
 
         pergunta.innerHTML =
-        "Quase lá, digite seu nome futuramente...";
+        "E por último...<br><br>
+         Digite o nome que eu sonho em ver um dia em vc❤️:
+        ";
 
         document.getElementById("senha").value = "";
 
