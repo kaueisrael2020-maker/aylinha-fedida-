@@ -184,6 +184,10 @@ button:hover{
         opacity:0;     
     }
 }
+#cursor{
+    animation: piscar 1s infinite;
+  }
+        
     
 </style>
 </head>
@@ -220,7 +224,9 @@ button:hover{
 <div class="container">
 
 <h1>💕Para Você💕</h1>
-<p id="textoDigitando"></p>    
+<p>
+  <span id="textoDigitando"></span><span id="cursor">|</span>
+</p>    
 <p>
 Sei q não sou um cara tão romântico, nem o mais prestativo, muito menos o mais educado. Só sei, q sou e estou apaixonado por você.
 
@@ -345,7 +351,7 @@ function verificarSenha(){
 </script>
 <script>
 
-const texto = "Você é a melhor parte dos meus dias ❤️|";
+const texto = "Você é a melhor parte dos meus dias ❤️";
 
 let i = 0;
 
