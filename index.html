@@ -91,7 +91,7 @@ audio{
     text-align:center;
     padding:20px;
 
-    animation: aparecer 1,2s ease;
+    animation: aparecer 1,5s ease;
     
     background:rgba(0, 0, 0, 0.25);
 
@@ -154,12 +154,12 @@ button:hover{
 @keyframes aparecer{
     from{
         opacity:0;
-        transform:translateY(20px);
+        transform:translateY(40px) scale(0.95);
     }
     
     to{
         opacity:1;
-        transform:translateY(0);
+        transform:translateY(0) scale(1);
     }
 
 .fade{
