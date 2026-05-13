@@ -307,7 +307,9 @@ function verificarSenha(){
 
         document.getElementById("surpresa").style.display = "block";
 
-         document.getElementById("surpresa").classList.add("fade");
+        document.getElementById("surpresa").classList.add("fade");
+
+        escreverTexto();
 
         document.getElementById("surpresa").innerHTML = `
             <h1>
@@ -350,8 +352,6 @@ function escreverTexto(){
         setTimeout(escreverTexto, 60);
     }
 }
-
-escreverTexto();
 
 </script>
 </body>
