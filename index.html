@@ -87,6 +87,15 @@ audio{
     padding:20px;
 }
 
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0, 0, 0, 0.45);
+    z-index:-1;
+
+}
+    
+
 #surpresa{
     display:none;
 }
@@ -120,6 +129,7 @@ button{
 </head>
 
 <body>
+    <div class="overlay"></div>
     <div id="inicio">
 
    <h1 id="pergunta">
