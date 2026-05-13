@@ -152,7 +152,11 @@ button:hover{
 
     box-shadow:0 0 25px rgba(255, 77, 166, 0.8);
 }
-
+    
+#textoDigitando{
+    animation: piscar 1s infinite;
+}
+    
 @keyframes aparecer{
     from{
         opacity:0;
@@ -174,6 +178,10 @@ button:hover{
     }
     to{
         background-size:110%;
+
+@keyframes piscar{
+    50%{
+        opacity:0;     
     }
 }
     
@@ -337,7 +345,7 @@ function verificarSenha(){
 </script>
 <script>
 
-const texto = "Você é a melhor parte dos meus dias ❤️";
+const texto = "Você é a melhor parte dos meus dias ❤️|";
 
 let i = 0;
 
