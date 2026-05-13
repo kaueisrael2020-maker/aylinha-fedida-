@@ -161,6 +161,10 @@ button:hover{
         opacity:1;
         transform:translateY(0);
     }
+
+.fade{
+    animation: aparecer 0.8s ease;
+  }
 }
     
 </style>
@@ -292,6 +296,8 @@ function verificarSenha(){
         document.getElementById("inicio").style.display = "none";
 
         document.getElementById("surpresa").style.display = "block";
+
+         document.getElementById("surpresa").classList.add("fade");
 
         document.getElementById("surpresa").innerHTML = `
             <h1>
