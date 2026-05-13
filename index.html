@@ -85,6 +85,8 @@ audio{
     gap:20px;
     text-align:center;
     padding:20px;
+
+    animation: aparecer 1,2s ease;
 }
 
 .overlay{
@@ -125,6 +127,18 @@ button{
     color:white;
     font-size:20px;
 }
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+    
 </style>
 </head>
 
