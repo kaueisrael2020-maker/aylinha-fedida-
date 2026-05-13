@@ -322,8 +322,8 @@ function verificarSenha(){
         etapa = 2;
 
         pergunta.innerHTML = `
-         E por último...<br><br>
-         Digite o nome que eu sonho em ver um dia em vc❤️:
+         E por último, digite seu nome completo<br><br>
+         com o sobrenome q eu sonho em ver um dia em vc:
         `;
 
         document.getElementById("senha").value = "";
@@ -338,8 +338,6 @@ function verificarSenha(){
 
         document.getElementById("surpresa").classList.add("fade");
 
-        escreverTexto();
-
         document.getElementById("surpresa").innerHTML = `
             <h1>
             Parabéns amor, sabia que você acertaria.. ❤️
@@ -351,6 +349,8 @@ function verificarSenha(){
             document.getElementById("surpresa").remove();
 
             document.getElementById("site").style.display = "block";
+
+            escreverTexto();
 
         }, 3000);
 
