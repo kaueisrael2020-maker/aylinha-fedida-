@@ -436,6 +436,23 @@ function mostrarElementos(){
 window.addEventListener("scroll", mostrarElementos);
 
 mostrarElementos();
+    
+if ('mediaSession' in navigator) {
+
+navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Para Ayla ❤️',
+    artist: 'Kaue Israel',
+    artwork: [
+        {
+            src: 'foto5.jpg',
+            sizes: '512x512',
+            type: 'image/jpeg'
+        }
+    ]
+});
+
+}
+</script>
 
 </script>
 </body>
