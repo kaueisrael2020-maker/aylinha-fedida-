@@ -21,6 +21,8 @@ background-attachment: fixed;
     font-family: Arial;
     color:white;
     overflow-x:hidden;
+
+    animation: fundoZoom 12s ease-in-out infinite alternate;
 }
 
 .container{
@@ -165,6 +167,14 @@ button:hover{
 .fade{
     animation: aparecer 0.8s ease;
   }
+
+@keyframes fundoZoom{
+    from{
+        background-size:100%;
+    }
+    to{
+        background-size:110%;
+    }
 }
     
 </style>
