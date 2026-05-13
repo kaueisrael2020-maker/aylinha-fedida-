@@ -162,31 +162,37 @@ button:hover{
         opacity:0;
         transform:translateY(40px) scale(0.95);
     }
-    
+
     to{
         opacity:1;
         transform:translateY(0) scale(1);
     }
+}
 
 .fade{
     animation: aparecer 0.8s ease;
-  }
+}
 
 @keyframes fundoZoom{
     from{
         background-size:100%;
     }
+
     to{
         background-size:110%;
+    }
+}
 
 @keyframes piscar{
     50%{
-        opacity:0;     
+        opacity:0;
     }
 }
+
 #cursor{
     animation: piscar 1s infinite;
-  }
+}
+
 .hidden{
     opacity:0;
     transform:translateY(30px);
@@ -197,7 +203,6 @@ button:hover{
     opacity:1;
     transform:translateY(0);
 }
-        
     
 </style>
 </head>
@@ -376,6 +381,26 @@ function escreverTexto(){
         setTimeout(escreverTexto, 60);
     }
 }
+    const elementos = document.querySelectorAll(".hidden");
+
+function mostrarElementos(){
+
+    elementos.forEach((el) => {
+
+        const topo = el.getBoundingClientRect().top;
+
+        if(topo < window.innerHeight - 100){
+
+            el.classList.add("show");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", mostrarElementos);
+
+mostrarElementos();
 
 </script>
 </body>
